@@ -1,0 +1,10 @@
+version: '3'
+services:
+  bot:
+    build: .
+    container_name: cfreminder-bot
+    restart: always
+    environment:
+      - DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN}
+    volumes:
+      - ./subscribers.db:/app/subscribers.db
